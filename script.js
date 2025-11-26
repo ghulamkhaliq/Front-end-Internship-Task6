@@ -78,16 +78,16 @@ async function loadServices() {
 async function loadQuotes(limit = 3) {
   if (!quotesContainer) return;
   quotesContainer.innerHTML = '<p class="muted">Loading quotes...</p>';
+
   try {
-    const urls = Array.from({ length: limit }, () => 'https://api.quotable.io/random');
-    // fetch them in parallel
-    const promises = urls.map(u => fetch(u).then(r => r.json()));
-    const results = await Promise.all(promises);
+    const res = await fetch(`https://dummyjson.com/quotes?limit=${limit}`);
+    const data = await res.json();
 
     quotesContainer.innerHTML = '';
-    results.forEach((q, i) => {
+
+    data.quotes.forEach((q, i) => {
       const card = el('blockquote', { class: 'quote-card reveal' }, [
-        el('p', { html: `“${fmt(q.content)}”` }),
+        el('p', { html: `“${fmt(q.quote)}”` }),
         el('footer', { html: `— ${fmt(q.author)}` })
       ]);
       card.style.transitionDelay = `${i * 90}ms`;
@@ -309,3 +309,4 @@ function initAll() {
 
 /* run when DOM ready */
 document.addEventListener('DOMContentLoaded', initAll);
+
