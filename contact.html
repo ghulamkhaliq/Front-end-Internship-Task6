@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ghulam Khalique</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list" id="navList">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contact-section">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h1>Contact</h1>
+          <p class="section-subtle">Want to work together or ask a question? Send a message — I typically reply within 24 hours.</p>
+
+          <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:khlqrajput125@gmail.com">khlqrajput125@gmail.com</a></p>
+            <p><strong>Phone:</strong> +92 301 0352778</p>
+            <p><strong>Location:</strong> Nawabshah, Pakistan</p>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form reveal" novalidate>
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" required />
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Your email" required />
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+
+          <div class="form-row form-actions">
+            <button id="submitBtn" class="btn primary" type="submit">Send Message</button>
+            <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; <span id="yearContact"></span> Ghulam Khalique</div>
+      <div><a href="index.html">Home</a> · <a href="about.html">About</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

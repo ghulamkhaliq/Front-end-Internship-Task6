@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ghulam Khalique — About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ghulam Khalique</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list" id="navList">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about-hero">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h1>About Me</h1>
+          <p class="section-subtle">I’m a front-end developer focused on building accessible and performant user experiences. I love clean code and thoughtful design.</p>
+
+          <h3>Skills</h3>
+          <ul class="skill-list">
+            <li>HTML & CSS (Grid / Flexbox)</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Design</li>
+            <li>Accessibility (WCAG)</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <div class="profile-card">
+            <img src="khaliq.png" alt="Khalique" class="profile-pic" />
+            <h3>Ghulam Khalique</h3>
+            <p>Front-End Developer</p>
+            <div class="social-row">
+              <a href="#" aria-label="GitHub">GitHub</a>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section timeline container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline-grid">
+        <div class="timeline-item reveal">
+          <h4>Frontend Developer — Example Co</h4>
+          <p class="muted">2024 — Present</p>
+          <p>Worked on UI components and performance improvements.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <h4>Junior Developer — Another Co</h4>
+          <p class="muted">2024 — 2025</p>
+          <p>Built landing pages and assisted with accessibility work.</p>
+        </div>
+      </div>
+    </section>
+    <!-- DYNAMIC SERVICES (empty container, content loaded from data/services.json) -->
+<section id="services" class="section services">
+  <div class="container">
+    <h2 class="section-title">What I do</h2>
+    <p class="section-subtle">Services loaded dynamically from JSON</p>
+
+    <div id="servicesContainer" class="services-grid" aria-live="polite">
+      <!-- JS will inject service cards here -->
+    </div>
+  </div>
+</section>
+
+<!-- QUOTES (API) -->
+<section id="quotes" class="section">
+  <div class="container">
+    <h2 class="section-title">Client Quotes</h2>
+    <p class="section-subtle">Sample quotes fetched from a public API</p>
+
+    <div id="quotesContainer" class="quotes-grid">
+      <!-- JS will inject quote cards here -->
+    </div>
+  </div>
+</section>
+
+<!-- BLOG (API posts preview) -->
+<section id="blog" class="section">
+  <div class="container">
+    <h2 class="section-title">Latest Posts (Demo)</h2>
+    <p class="section-subtle">Fetched from JSONPlaceholder (demo API)</p>
+
+    <div id="postsContainer" class="portfolio-grid">
+      <!-- JS will inject post cards here -->
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; <span id="yearAbout"></span> Ghulam Khalique</div>
+      <div><a href="index.html">Home</a> · <a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
